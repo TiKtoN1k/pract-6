@@ -43,9 +43,9 @@ namespace bamms6practa
         }
         public static List<Figure> OpenXml(string text)
         {
-            File.WriteAllText("gg.xml", text);
+            File.WriteAllText("oks.xml", text);
             XmlSerializer xml = new XmlSerializer(typeof(List<Figure>));
-            using (FileStream fs = new FileStream("gg.xml", FileMode.Open))
+            using (FileStream fs = new FileStream("oks.xml", FileMode.Open))
             {
                 return (List<Figure>)xml.Deserialize(fs);
             }
